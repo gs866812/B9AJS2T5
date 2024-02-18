@@ -43,3 +43,34 @@ nav input[type="text"]:focus{
 .border-bottom{
   border-bottom: 2px solid #1DD100;
 }
+.border-top{
+  border-top: 2px solid #1DD100;
+  border-radius: 88px 88px 0 0;
+}
+
+.offer-btn{
+  color: #1DD100;
+  border: 1px solid #1DD100;
+}
+
+.border-dashed{
+  border-top: 2px dashed rgba(128, 128, 128, 0.599);
+  border-bottom: 2px dashed rgba(128, 128, 128, 0.599);
+}
+.border-dashed-right{
+  border-right: 2px dashed rgba(128, 128, 128, 0.599);
+}
+.border-dashed-bottom{
+  border-bottom: 2px dashed rgba(128, 128, 128, 0.599);
+}
+.pointer{
+  cursor: pointer;
+}
+.border-bottom-solid{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.599);
+}
+.apply-btn:focus{
+  outline: 0;
+}
+
+
