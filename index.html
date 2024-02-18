@@ -17,35 +17,36 @@
     <title>E - Ticket</title>
 </head>
 <body>
+  
     <header class="lg:mx-10">
-        <nav>
-            <div class="navbar padding-none">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
-                      <li><a>Home</a></li>
-                      <li><a>About</a></li>
-                      <li><a>Destination</a></li>
-                    </ul>
-                  </div>
-                  <a href="" class="text-4xl font-extrabold">E-Ticket</a>
+      <nav>
+        <div class="navbar padding-none">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Destination</a></li>
-                  </ul>
-                </div>
-                <input type="text" placeholder="Search" size="10" class="pl-1 p-1 rounded-md"/>
-                <div class="navbar-end">
-                  <button class="text-xl text-[#1DD100] bg-[#1DD1001A] bus-button px-4 py-2 rounded-lg font-semibold flex flex-row gap-1 items-center">Bus <img width="100%" src="images/bus-icon.png" alt=""></button>
-                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                </ul>
               </div>
-        </nav>
+              <a href="" class="text-4xl font-extrabold">E-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+              </ul>
+            </div>
+            <input type="text" placeholder="Search" size="10" class="pl-1 p-1 rounded-md"/>
+            <div class="navbar-end">
+              <button class="text-xl text-[#1DD100] bg-[#1DD1001A] bus-button px-4 py-2 rounded-lg font-semibold flex flex-row gap-1 items-center">Bus <img width="100%" src="images/bus-icon.png" alt=""></button>
+            </div>
+          </div>
+    </nav>
         <!-- Banner start -->
         <section class="banner-container h-[550px] mt-3 bg-[url('images/banner.png')] bg-no-repeat bg-cover flex flex-col items-center justify-center gap-7 relative">
           <h2 class="text-white text-6xl font-bold">End-to-End Travel with </h2>
@@ -134,7 +135,7 @@
         <!-- ...............................best offer section end .............................................................-->
 
         <!-- ...............................main section start .............................................................-->
-        <section class="border-top w-full bg-[#f7f8f8] mt-32">
+        <section class="border-top w-full bg-[#f7f8f8] mt-32 pb-16">
           <!-- P.H paribahan -->
           <div class="mt-14 lg:mx-10 text-center">
             <h2 class="text-4xl font-bold">P.H Paribahan</h2>
@@ -369,7 +370,7 @@
 
                 </form>
               </div>
-              <button class="bg-[#1DD100] text-white font-bold text-xl w-full p-3 rounded-xl mt-3" id="next-button" onclick="my_modal_5.showModal()">Next</button>
+              <button class="bg-[#1DD100] text-white font-bold text-xl w-full p-3 rounded-xl mt-3" id="next-button" onclick="my_modal_5.showModal()" disabled>Next</button>
               <div class="font-inter text-[#03071299] text-[16px] flex justify-between mt-4">
                 <a href="" class="border-bottom-solid">Terms and Conditions</a>
                 <a href="" class="border-bottom-solid">Cancellation Policy</a>
@@ -399,8 +400,30 @@
         </dialog>
     </main>
 
-    <footer>
+    <footer class="bg-[#030712] lg:px-10 text-white py-10">
+      <div class="flex justify-between border-dashed-bottom py-10">
+        <div>
+          <h2 class="text-4xl font-bold">P-Ticket</h2>
+          <p class="font-inter text-[#87898e] py-2">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+        </div>
+        <div>
+          <h2 class="font-semibold text-xl">Download our app</h2>
+          <a href="" class="flex gap-3 py-2 items-center p-2 rounded-2xl mt-3" style="border: 1px solid grey;">
+            <img src="images/playstore.png" alt="play store">
+            <div>
+              <small>GET IT ON</small>
+              <h4 class="font-bold">Google Play</h4>
+            </div>
+          </a>
+        </div>
+      </div>
 
+      <div class="font-inter flex gap-8 mt-5 py-5 justify-between">
+        <p class=" text-[16px] text-[#87898e] flex-1">@all rights reserved, P-Ticket services limited.2024</p>
+        <a href="">Terms & condition</a>
+        <a href="">Return & refund policy</a>
+        <a href="">Privacy policy</a>
+      </div>
     </footer>
 
 
