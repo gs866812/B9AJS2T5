@@ -1,0 +1,34 @@
+/* .......................font family................................. */
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+/* ..................................................................... */
+
+body{
+    margin: 0 auto;
+    font-family: "Raleway", sans-serif;
+}
+
+nav li a:hover{
+    background: none!important;
+    color: #1DD100;
+}
+nav input[type="text"]:focus{
+    outline: 1px solid rgba(128, 128, 128, 0.342);
+}
+
+.bus-button{
+    border: 1px solid #1DD100;
+}
+
+.secondary-color{
+    color: #1DD100;
+}
