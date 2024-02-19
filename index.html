@@ -348,12 +348,12 @@
 
               <!-- form/user info -->
               <div class="mt-4">
-                <form action="" class="font-inter text-[16px]">
+                <form onkeyup="validNumber()" action="" class="font-inter text-[16px]" id="form">
                   <label for="" class="font-semibold">Passenger Name*</label>
-                  <input id="passenger-name" type="text" placeholder="Enter your name" class="input input-bordered w-full my-3" required />
+                  <input onkeyup="validateName()" id="passenger-name" type="text" placeholder="Enter your name" class="input input-bordered w-full my-3" required />
 
                   <label for="" class="font-semibold">Phone Number*</label>
-                  <input onkeyup="validNumber()" id="phone-number" type="tel" placeholder="Enter your phone number" class="input input-bordered w-full my-3" required />
+                  <input onkeyup="validatePhoneNumber()" id="phone-number" type="tel" placeholder="Enter your phone number" class="input input-bordered w-full my-3" required />
 
                   <label for="" class="font-semibold">Email ID</label>
                   <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full my-3" />
@@ -382,7 +382,7 @@
             <div class="modal-action flex justify-center">
               <form method="dialog">
                 <!-- if there is a button in form, it will close the modal -->
-                <button class="font-roboto text-white bg-[#27ae60] font-semibold p-3 px-14 rounded-full">Continue</button>
+                <a href="" class="font-roboto text-white bg-[#27ae60] font-semibold p-3 px-14 rounded-full">Continue</a>
               </form>
             </div>
 

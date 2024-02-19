@@ -23,7 +23,7 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
 
     newDiv.innerHTML = `
         <div class="flex justify-between py-1">
-        <p>${target}</p>
+        <p id="">${target}</p>
         <p>Economy</p>
         <p>${ticketPrice}</p>
         </div>
@@ -65,15 +65,47 @@ applyButton.addEventListener('click', function() {
     }
 })
 
-const passengerName = document.getElementById('passenger-name').value;
-const phoneNumber = document.getElementById('phone-number').value;
+
+
 const nextButton = document.getElementById('next-button');
+const convertTotalPrice = parseInt(totalPrice.innerText);
 
 function validNumber(){
-    if(totalPrice.innerText >= 2200 && passengerName.length > 0 && phoneNumber.length === 11){
+    const convertTotalPrice = parseInt(totalPrice.innerText);
+    const passengerName = document.getElementById('passenger-name').value;
+    const phoneNumber = document.getElementById('phone-number').value;
+    if(convertTotalPrice >= 2200 && passengerName.length > 0 && phoneNumber.length === 11){
         nextButton.removeAttribute('disabled');
         removeClass('next-button', 'bg-[#6ab15f]');
         addClass('next-button', 'bg-[#1DD100]');
     }
+    else{
+        nextButton.setAttribute('disabled', true);
+        removeClass('next-button', 'bg-[#1DD100]');
+        addClass('next-button', 'bg-[#6ab15f]');
+
+    }
+
+    const validateName = passengerName.toLowerCase();
+    console.log(validateName);
+
 }
+
+function validateName() {
+    const inputField = document.getElementById('passenger-name');
+    let inputValue = inputField.value;
+    inputValue = inputValue.replace(/[^A-Za-z\s]/g, '');
+    inputField.value = inputValue;
+}
+
+
+function validatePhoneNumber() {
+    const inputField = document.getElementById('phone-number');
+    let inputValue = inputField.value;
+    inputValue = inputValue.replace(/\D/g, '');
+    inputField.value = inputValue;
+}
+
+
+
 
