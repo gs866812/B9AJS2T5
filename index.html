@@ -122,7 +122,7 @@
               <img class="ml-5" src="images/cupon-devider.png" alt="">
 
               <div class="flex flex-col justify-center items-center gap-2 w-[30%]">
-                <h2 class="text-xl font-bold">Couple20</h2>
+                <h2 class="text-xl font-bold">Couple 20</h2>
                 <p class="text-[#03071280]">Coupon Code</p>
               </div>
             </div>
@@ -155,7 +155,7 @@
                   </div>
                 </div>
                 <div>
-                  <a class="text-[#1DD100] bg-[#1DD1001A] bus-button px-4 py-2 rounded-lg font-semibold flex flex-row gap-1 items-center font-inter"> <img src="images/seat-green.png" alt=""> <span>40</span> Seats left</a>
+                  <a class="text-[#1DD100] bg-[#1DD1001A] bus-button px-4 py-2 rounded-lg font-semibold flex flex-row gap-1 items-center font-inter"> <img src="images/seat-green.png" alt=""> <span id="remaining-seats">40</span> Seats left</a>
                 </div>
               </div>
 
@@ -301,7 +301,7 @@
               </div>
             </div>
 
-
+            <!-- calculation right side -->
             <div class="p-4 w-[40%]">
               <div class="border-dashed-bottom py-[14px]"><h2 class="text-2xl font-semibold">Your selected seat</h2></div>
               <!-- calculation -->
@@ -312,45 +312,35 @@
                   <p>Price</p>
                 </div>
                 <!-- selected tickets container -->
-                <div class="border-bottom-solid py-4" id="selected-ticket">
-                  <div class="flex justify-between py2">
+                <div class="border-bottom-solid py-4 hidden" id="selected-ticket">
+                  <!-- <div class="flex justify-between py2">
                     <p>C2</p>
                     <p>Economy</p>
                     <p>550</p>
-                  </div>
-                  <div class="flex justify-between py-2">
-                    <p>C2</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                  </div>
-
-                  <div class="flex justify-between py2">
-                    <p>C2</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                  </div>
+                  </div> -->
+                  
 
                 </div>
                 <!-- total price cal -->
-                <div class="font-bold flex justify-between py-3">
+                <div class="font-bold flex justify-between py-3 hidden" id="total-price-box">
                   <p>Total Price</p>
                   <p>BDT <span id="total-price">00</span></p>
                 </div>
                 <!-- discount price cal -->
-                <div class="font-bold flex justify-between py-3">
+                <div class="font-bold flex justify-between py-3 hidden" id="discount-price-box">
                   <p>Discount</p>
                   <p>BDT <span id="discount-price">00</span></p>
                 </div>
 
                 <!-- coupon apply -->
-                <div class="font-inter relative">
-                  <input class="w-full py-4 rounded-xl pl-2 apply-btn" type="text" placeholder="Have any coupon?">
-                  <button class="bg-[#1DD100] text-white font-semibold py-2 px-3 rounded-xl absolute right-[8px] top-2">Apply</button>
+                <div class="font-inter relative hidden" id="coupon-area">
+                  <input onkeyup="applyCoupon()" class="w-full py-4 rounded-xl pl-2 apply-btn" type="text" placeholder="Have any coupon?" id="coupon-field">
+                  <button class="bg-[#6ab15f] text-white font-semibold py-2 px-3 rounded-xl absolute right-[8px] top-2" id="apply-button" disabled>Apply</button>
                 </div>
                 <!-- grand total -->
-                <div class="font-bold flex justify-between py-3">
+                <div class="font-bold flex justify-between py-3 hidden" id="grand-total-box">
                   <p>Grand Total</p>
-                  <p>BDT <span id="grand-total- price">00</span></p>
+                  <p>BDT <span id="grand-total-price">00</span></p>
                 </div>
 
 
@@ -363,14 +353,14 @@
                   <input id="passenger-name" type="text" placeholder="Enter your name" class="input input-bordered w-full my-3" required />
 
                   <label for="" class="font-semibold">Phone Number*</label>
-                  <input id="phone-number" type="text" placeholder="Enter your phone number" class="input input-bordered w-full my-3" required />
+                  <input onkeyup="validNumber()" id="phone-number" type="tel" placeholder="Enter your phone number" class="input input-bordered w-full my-3" required />
 
                   <label for="" class="font-semibold">Email ID</label>
                   <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full my-3" />
 
                 </form>
               </div>
-              <button class="bg-[#1DD100] text-white font-bold text-xl w-full p-3 rounded-xl mt-3" id="next-button" onclick="my_modal_5.showModal()" disabled>Next</button>
+              <button class="bg-[#6ab15f] text-white font-bold text-xl w-full p-3 rounded-xl mt-3" id="next-button" onclick="my_modal_5.showModal()" disabled>Next</button>
               <div class="font-inter text-[#03071299] text-[16px] flex justify-between mt-4">
                 <a href="" class="border-bottom-solid">Terms and Conditions</a>
                 <a href="" class="border-bottom-solid">Cancellation Policy</a>
