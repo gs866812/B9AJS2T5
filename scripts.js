@@ -49,12 +49,13 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
 
     if(totalPrice.innerText >= 2200){
         removeClass('coupon-area', 'hidden');
-        removeClass('discount-price-box', 'hidden');
+        // removeClass('discount-price-box', 'hidden');
     }
 
     
     removeClass(target, 'bg-[#f7f8f8]');
     addClass(target, 'bg-[#1DD100]');
+    addClass(target, 'text-white');
 
     validNumber();
 
@@ -70,10 +71,12 @@ applyButton.addEventListener('click', function() {
         discountPrice.innerText = parseInt(totalPrice.innerText) * .15; 
         grandTotalPrice.innerText = totalPrice.innerText - discountPrice.innerText;
         addClass('coupon-area', 'hidden');
+        removeClass('discount-price-box', 'hidden');
     } else if(couponField.value === 'Couple 20'){
         discountPrice.innerText = parseInt(totalPrice.innerText) * .20; 
         grandTotalPrice.innerText = totalPrice.innerText - discountPrice.innerText;
         addClass('coupon-area', 'hidden');
+        removeClass('discount-price-box', 'hidden');
     }
 })
 
