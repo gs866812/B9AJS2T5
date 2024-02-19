@@ -56,6 +56,8 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
     removeClass(target, 'bg-[#f7f8f8]');
     addClass(target, 'bg-[#1DD100]');
 
+    validNumber();
+
 
 });
 
@@ -95,8 +97,6 @@ function validNumber(){
         addClass('next-button', 'bg-[#6ab15f]');
 
     }
-
-    const validateName = passengerName.toLowerCase();
 
 }
 
