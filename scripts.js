@@ -1,3 +1,4 @@
+const selectedSeats = [];
 
 document.getElementById('seat-container').addEventListener('click', function(e) {
     const ticketPrice = 550;
@@ -6,11 +7,17 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
 
     const seatCounting = document.getElementById('seat-counting');
     let countingSeat = parseInt(seatCounting.innerText);
+
+    if (selectedSeats.includes(target)) {
+        alert(`${target} is already selected`);
+        return;
+    }
     
     if(seatCounting.innerText >= 4){
         return alert('You have selected maximum number of seat');
     }
     seatCounting.innerText = countingSeat + 1;
+    selectedSeats.push(target);
 
     const remainingSeat = document.getElementById('remaining-seats');
     let seatLeft = parseInt(remainingSeat.innerText);
@@ -28,6 +35,8 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
         <p>${ticketPrice}</p>
         </div>
     `;
+
+
     selectedTicket.appendChild(newDiv);
     removeClass('total-price-box', 'hidden');
     removeClass('grand-total-box', 'hidden');
@@ -46,6 +55,7 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
     
     removeClass(target, 'bg-[#f7f8f8]');
     addClass(target, 'bg-[#1DD100]');
+
 
 });
 
@@ -87,7 +97,6 @@ function validNumber(){
     }
 
     const validateName = passengerName.toLowerCase();
-    console.log(validateName);
 
 }
 
