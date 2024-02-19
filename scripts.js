@@ -9,7 +9,7 @@ document.getElementById('seat-container').addEventListener('click', function(e) 
     let countingSeat = parseInt(seatCounting.innerText);
 
     if (selectedSeats.includes(target)) {
-        alert(`${target} is already selected`);
+        alert(`${target} has already selected`);
         return;
     }
     
@@ -84,7 +84,7 @@ function validNumber(){
     const convertTotalPrice = parseInt(totalPrice.innerText);
     const passengerName = document.getElementById('passenger-name').value;
     const phoneNumber = document.getElementById('phone-number').value;
-    if(convertTotalPrice >= 2200 && passengerName.length > 0 && phoneNumber.length === 11){
+    if(convertTotalPrice >= 550 && passengerName.length > 0 && phoneNumber.length === 11){
         nextButton.removeAttribute('disabled');
         removeClass('next-button', 'bg-[#6ab15f]');
         addClass('next-button', 'bg-[#1DD100]');
