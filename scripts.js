@@ -3,6 +3,10 @@ const selectedSeats = [];
 document.getElementById('seat-container').addEventListener('click', function(e) {
     const ticketPrice = 550;
     const target = e.target.innerText;
+
+    if(e.target.className.indexOf('pointer') === -1){
+        return;
+    }
     
 
     const seatCounting = document.getElementById('seat-counting');
@@ -102,6 +106,14 @@ function validNumber(){
     }
 
 }
+
+nextButton.addEventListener('click', function(){
+    const elements = document.querySelectorAll('header, main, footer');
+    for(let element of elements){
+        element.classList.add('hidden');
+    }
+    
+});
 
 function validateName() {
     const inputField = document.getElementById('passenger-name');
